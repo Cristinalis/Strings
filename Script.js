@@ -1,3 +1,5 @@
+import { PALAVRAS_RUINS } from "./palavrasRuins.js";
+
 const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
 
 botaoMostraPalavras.addEventListener('click', mostraPalavrasChave);
@@ -12,9 +14,8 @@ function mostraPalavrasChave() {
 
 function processaTexto(texto) {
     let palavras = texto.split(/\P{L}+/u);
-    return palavras;
-}
-   for (let i in palavras) {
+
+    for (let i in palavras) {
         palavras[i] = palavras[i].toLowerCase();
     }
 
